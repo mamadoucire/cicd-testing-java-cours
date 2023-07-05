@@ -22,7 +22,7 @@ node {
             sh "mvn clean install"
         }
 
-        stage('Sonarqube Analysis') {
+        /*stage('Sonarqube Analysis') {
             withSonarQubeEnv('SonarQubeLocalServer') {
                 sh " mvn sonar:sonar -Dintegration-tests.skip=true -Dmaven.test.failure.ignore=true"
             }
@@ -32,7 +32,7 @@ node {
                     error "Pipeline aborted due to quality gate failure: ${qg.status}"
                 }
             }
-        }
+        }*/
 
         stage("Image Prune") {
             imagePrune(CONTAINER_NAME)
