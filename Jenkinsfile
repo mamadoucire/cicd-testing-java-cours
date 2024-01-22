@@ -4,6 +4,7 @@ pipeline{
         stage('Build with test') {
            steps {
                script {
+                  sh 'echo bonjour'
                   sh "mvn clean install"
                }
            }
