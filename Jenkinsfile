@@ -1,12 +1,6 @@
 pipeline{
     agent any
     stages {
-        
-
-        stage('Checkout') {
-            checkout scm
-        }
-
         stage('Build with test') {
            steps {
                script {
