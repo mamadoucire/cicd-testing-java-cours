@@ -1,5 +1,7 @@
 pipeline{
-    agent any
+    agent {
+        label 'alma_slave'
+    }
     stages {
         stage('Build with test') {
            steps {
