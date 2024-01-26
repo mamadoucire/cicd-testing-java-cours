@@ -1,3 +1,4 @@
+@Library('share-library') _
 pipeline{
     agent {
         label 'alma_slave'
